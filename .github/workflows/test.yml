@@ -1,0 +1,11 @@
+name: Github Actions Test
+on: [push]
+
+jobs:
+  Test:
+    # runs-on: 表示在什么样的docker镜像环境下执行
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Hello World"
+      - run: echo "${{ github.event_name }}"
+
