@@ -1,0 +1,17 @@
+name: Github Actions Test2
+on: [push]
+
+jobs:
+  Test2:
+    # ubuntu-latest 乌邦图
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Hello World"
+      - run: echo "${{ github.event_name }}"
+      - run: echo "${{ github.repository }}"
+      - run: echo "${{ github.ref }}"
+      - run: echo "${{ github.head_ref }}"
+      - run: echo "${{ github.base_ref }}"
+      - run: echo "${{ github.workflow }}"
+      - run: echo "${{ github.run_number }}"
+      - run: echo "${{ github.run_id }}"
